@@ -5,9 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     name: output detail
     steps:
-      - name: Get code
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm ci 
       - name: echo issues
         run: echo "${{ toJSON(github.event) }}"
